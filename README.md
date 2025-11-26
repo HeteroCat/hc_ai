@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heterocat
 
-## Getting Started
+Heterocat 是一个基于 Next.js 16 构建的现代 Web 应用程序，专注于提供极致的视觉体验和流畅的交互动画。
 
-First, run the development server:
+## ✨ 特性
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **沉浸式背景**: 使用 `Hyperspeed` 组件创建的高速穿梭视觉效果。
+- **动态光标**: 集成 `SplashCursor`，为用户交互增添流体般的动态反馈。
+- **优雅导航**: 采用 `StaggeredMenu`，提供平滑的交错式菜单动画体验。
+- **高性能**: 基于 React 19 和 Next.js 16，确保极速加载和流畅运行。
+
+## 🛠️ 技术栈
+
+- **框架**: [Next.js 16](https://nextjs.org/) (App Router)
+- **UI 库**: [React 19](https://react.dev/)
+- **样式**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **动画**: [GSAP](https://greensock.com/gsap/) (GreenSock Animation Platform)
+- **3D 渲染**: [Three.js](https://threejs.org/) & [Postprocessing](https://github.com/pmndrs/postprocessing)
+
+## 🚀 快速开始
+
+1.  **安装依赖**:
+
+    ```bash
+    npm install
+    # 或
+    yarn install
+    # 或
+    pnpm install
+    ```
+
+2.  **启动开发服务器**:
+
+    ```bash
+    npm run dev
+    # 或
+    yarn dev
+    # 或
+    pnpm dev
+    ```
+
+3.  打开浏览器访问 [http://localhost:3000](http://localhost:3000) 查看效果。
+
+## 📂 项目结构
+
+```
+heterocat/
+├── app/                # Next.js 应用路由和页面
+│   ├── page.tsx        # 主页
+│   ├── layout.tsx      # 根布局
+│   └── globals.css     # 全局样式
+├── components/         # 自定义 UI 组件
+│   ├── Hyperspeed.tsx  # 3D 速度线背景组件
+│   ├── SplashCursor.tsx# 液体光标效果组件
+│   └── StaggeredMenu.tsx # 侧边导航菜单组件
+├── lib/                # 工具函数
+└── public/             # 静态资源
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 组件说明
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Hyperspeed
+基于 Three.js 的全屏背景组件，模拟星际穿越或超光速旅行的视觉效果。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### SplashCursor
+一个交互式光标组件，在鼠标移动和点击时产生类似液体的飞溅效果。
 
-## Learn More
+### StaggeredMenu
+一个高度可定制的侧边菜单，具有交错的进入/退出动画和响应式设计。
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 脚本
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `dev`: 启动开发模式
+- `build`: 构建生产版本
+- `start`: 运行生产版本
+- `lint`: 运行 ESLint 检查
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Created by Jason
