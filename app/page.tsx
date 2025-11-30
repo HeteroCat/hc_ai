@@ -3,6 +3,13 @@
 import dynamic from 'next/dynamic';
 import SplashCursor from '@/components/SplashCursor';
 import StaggeredMenu from '@/components/StaggeredMenu';
+import HeroSection from '@/components/HeroSection';
+import ProjectSection from '@/components/ProjectSection';
+import ProductSection from '@/components/ProductSection';
+import SkillSection from '@/components/SkillSection';
+import ContactSection from '@/components/ContactSection';
+import { Separator } from '@/components/ui/separator';
+
 const Hyperspeed = dynamic(() => import('@/components/Hyperspeed'), {
   ssr: false,
 });
@@ -16,28 +23,35 @@ export default function Home() {
   ];
 
   const socialItems = [
-    { label: 'TikTok', link: 'https://www.douyin.com/user/MS4wLjABAAAAvBkZt534BdaLk_KUZpdWBa3CzGgL-nvlMNZKWHD054U' },
-    { label: 'GitHub', link: 'https://github.com/HeteroCat' },
+    { label: 'RedBook', link: 'https://www.xiaohongshu.com/user/profile/5f43082c00000000010079c8?xsec_token=YB2_yPn0gUQnikW-PCbURMzcIXeLuikSFLytmYFOQBMBg%3D&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0w2MzM9Nkw2NzUyOTgwNjY0OTc7PklB&apptime=1764504808&share_id=caea373b46684abca09ee6dd3bee09a4&share_channel=copy_link' },
+    { label: 'DouYin', link: 'https://www.douyin.com/user/MS4wLjABAAAAvBkZt534BdaLk_KUZpdWBa3CzGgL-nvlMNZKWHD054U' },
     { label: 'Bilibili', link: 'https://space.bilibili.com/629561876?spm_id_from=333.33.0.0' },
+    { label: 'X', link: "https://x.com/HeteroCat0011?t=otYpxGFel3LaTvMhQsVUCw&s=09" },
   ];
 
   return (
-    <main className="relative w-full h-screen bg-black flex items-center justify-center">
-      {/* 你的 Hyperspeed 背景 */}
-      <div className="absolute inset-0 z-0">
+    <main className="relative w-full min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
         <Hyperspeed preset="two" />
       </div>
 
-      {/* SplashCursor 放在文字或任意元素上方 */}
-      <div className="relative z-10">
-        <h1 className="text-8xl font-bold text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]">
-          JasonHuang
-        </h1>
-        {/* 在文字上叠加光标效果 */}
+      {/* Content Overlay */}
+      <div className="relative z-10 container mx-auto px-4 py-8 space-y-16">
         <SplashCursor />
+
+        <HeroSection />
+        <Separator className="bg-white/10" />
+        <ProjectSection />
+        <Separator className="bg-white/10" />
+        <ProductSection />
+        <Separator className="bg-white/10" />
+        <SkillSection />
+        <Separator className="bg-white/10" />
+        <ContactSection />
       </div>
 
-      <div style={{ height: '100vh', background: '#1a1a1a' }}>
+      <div style={{ position: 'fixed', top: 0, right: 0, height: '100vh', zIndex: 50 }}>
         <StaggeredMenu
           position="right"
           items={menuItems}
@@ -48,7 +62,6 @@ export default function Home() {
           openMenuButtonColor="#fff"
           changeMenuColorOnOpen={true}
           colors={['#B19EEF', '#5227FF']}
-
           accentColor="#FACC15"
           isFixed={true}
           onMenuOpen={() => console.log('Menu opened')}
