@@ -19,12 +19,12 @@ export default function HeroSection() {
                     JasonHuang
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-300 font-medium">
-                    AI Developer & Full Stack Engineer
+                    AI 工程师 & AI 导演
                 </h2>
 
                 <p className="text-lg text-gray-400 leading-relaxed">
-                    Passionate about building intelligent applications and exploring the frontiers of Artificial Intelligence.
-                    Dedicated to creating seamless user experiences powered by cutting-edge technology.
+                    专注于构建AI智能应用产品和效果，探索人工智能的奥秘。
+                    致力于通过前沿AI技术为用户和观众提供无与伦比的奇妙AI体验。
                 </p>
 
                 <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-4">
@@ -36,9 +36,12 @@ export default function HeroSection() {
                 <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10 w-full">
                     <h3 className="text-lg font-semibold mb-2 text-yellow-400">Honors & Awards</h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm text-left">
-                        <li>Top Writer in AI on Zhihu (2024)</li>
-                        <li>Best AI Application Award - Hackathon 2023</li>
-                        <li>Contributor to Major Open Source AI Projects</li>
+                        <li>Datewhale成员</li>
+                        <li>WaytoAGI超创</li>
+                        <li>稀土掘金社区AI人气作者</li>
+                        <li>上海交通大学AI访谈嘉宾</li>
+                        <li>《ChatGPT原理与应用开发》共创作者</li>
+                        <li>《Hello-Agents》开源项目核心贡献者</li>
                     </ul>
                 </div>
             </div>
