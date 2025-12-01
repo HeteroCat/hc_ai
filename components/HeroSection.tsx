@@ -6,7 +6,7 @@ export default function HeroSection() {
         <section className="flex flex-col md:flex-row items-center justify-center gap-8 py-12">
             <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
                 <Image
-                    src="/15010f64-74fa-470b-9a7c-b60fa3bb948e.jpeg"
+                    src="/Jason-img.jpeg"
                     alt="JasonHuang"
                     fill
                     className="object-cover rounded-full border-4 border-white/10 shadow-2xl"

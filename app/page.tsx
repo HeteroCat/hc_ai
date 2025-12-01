@@ -25,8 +25,8 @@ export default function Home() {
   const socialItems = [
     { label: 'RedBook', link: 'https://www.xiaohongshu.com/user/profile/5f43082c00000000010079c8?xsec_token=YB2_yPn0gUQnikW-PCbURMzcIXeLuikSFLytmYFOQBMBg%3D&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0w2MzM9Nkw2NzUyOTgwNjY0OTc7PklB&apptime=1764504808&share_id=caea373b46684abca09ee6dd3bee09a4&share_channel=copy_link' },
     { label: 'DouYin', link: 'https://www.douyin.com/user/MS4wLjABAAAAvBkZt534BdaLk_KUZpdWBa3CzGgL-nvlMNZKWHD054U' },
-    { label: 'Bilibili', link: 'https://space.bilibili.com/629561876?spm_id_from=333.33.0.0' },
-    { label: 'X', link: "https://x.com/HeteroCat0011?t=otYpxGFel3LaTvMhQsVUCw&s=09" },
+    { label: 'Bilibili', link: 'https://space.bilibili.com/629561876?spm_id_from=333.33.0.0' }
+
   ];
 
   return (

@@ -5,25 +5,25 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
     {
-        title: 'HeteroCat',
-        description: 'A Next.js based portfolio and playground for testing new AI interactions and 3D web technologies.',
-        tags: ['Next.js', 'React Three Fiber', 'TailwindCSS', 'AI Integration'],
-        link: 'https://github.com/HeteroCat',
-        github: 'https://github.com/HeteroCat',
+        title: 'Hello-Agents',
+        description: '📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程.从基础理论到实际应用，全面掌握智能体系统的设计与实现，Datawhale 社区的系统性智能体学习教程',
+        tags: ['Python', 'OpenAI', 'LLM', 'Agents', "multiagent-systems"],
+        link: 'https://book.heterocat.com.cn',
+        github: 'https://github.com/datawhalechina/hello-agents',
     },
     {
-        title: 'Jason\'s AI Fantasy World',
-        description: 'An interactive Streamlit application showcasing various AI capabilities and demos.',
-        tags: ['Streamlit', 'Python', 'LLM', 'Generative AI'],
-        link: 'https://jasonai.streamlit.app/',
-        github: '',
+        title: 'Hugging-LLM',
+        description: 'HuggingLLM, Hugging Future.Hugging-LLM是一个介绍 ChatGPT 原理、使用和应用的项目，降低使用门槛，让更多感兴趣的非NLP或算法专业人士能够无障碍使用LLM创造价值。',
+        tags: ['Jupyter Notebook', 'OpenAI', 'Qwen', 'LLM', 'ButterflyBook'],
+        link: 'https://datawhalechina.github.io/hugging-llm/#/',
+        github: 'https://github.com/datawhalechina/hugging-llm',
     },
     {
-        title: 'AI Knowledge Base',
-        description: 'A comprehensive collection of AI articles and tutorials shared on Zhihu.',
-        tags: ['Technical Writing', 'Knowledge Sharing', 'Community'],
-        link: 'https://zhuanlan.zhihu.com/p/706412327',
-        github: '',
+        title: 'AsyncTrader',
+        description: '用 ChatGPT 自动构建量化交易系统听起来很酷，不是吗？本项目使用 ChatGPT 自动编写和回测定量交易策略，并提供文档问答功能。2023年百度大模型应用创新挑战赛最佳创意作品奖',
+        tags: ['Quant', 'OpenAI', 'Freqtrade', 'Vnpy', 'Langchain'],
+        link: 'https://github.com/HeteroCat/AsyncTrader',
+        github: 'https://github.com/HeteroCat/AsyncTrader',
     },
 ];
 
@@ -55,7 +55,7 @@ export default function ProjectSection() {
                             {project.github && (
                                 <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white" asChild>
                                     <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                        <Github className="mr-2 h-4 w-4" /> Code
+                                        <Github className="mr-2 h-4 w-4" /> GitHub
                                     </a>
                                 </Button>
                             )}

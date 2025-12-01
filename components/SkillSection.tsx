@@ -1,17 +1,17 @@
 import { Badge } from '@/components/ui/badge';
 
 const skills = {
-    "AI & Machine Learning": [
-        "Large Language Models", "PyTorch", "TensorFlow", "Computer Vision", "NLP", "LangChain", "RAG"
+    "AI 开发": [
+        "Claude code", "Trae", "PyTorch", "coze", "n8n", "LangChain", "RAG"
     ],
-    "Frontend Development": [
-        "React", "Next.js", "TypeScript", "TailwindCSS", "Three.js", "Framer Motion"
+    "AI 创作": [
+        "ChatGPT", "NanoBanana", "Suno", "Kling", "Hailuo", "Jimeng"
     ],
-    "Backend & Cloud": [
-        "Python", "Node.js", "FastAPI", "PostgreSQL", "Docker", "AWS", "Vercel"
+    "软件工程": [
+        "Python", "Node.js", "Next.js", "FastAPI", "MYSQL", "Docker", "Reactbits"
     ],
-    "Tools & Others": [
-        "Git", "Linux", "Streamlit", "Figma", "Agile Methodologies"
+    "产品技能": [
+        "Product", "Figma", "Data Analysis", "feishu", "Growth & Branding", "Git"
     ]
 };
 
