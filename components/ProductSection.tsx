@@ -7,21 +7,27 @@ const products = [
         name: 'PromptMarket',
         description: 'PromptMarket 是一个AI提示广场，发现、分享和创建高质量的AI提示词模板。为电商、金融、教育工作者提供专业的提示词资源，提升AI使用效率和创作质量',
         status: 'Live',
-        users: '100+',
+        users: '',
         link: 'https://prompt.heterocat.com.cn',
     },
     {
         name: 'StarShadows.AI',
         description: 'StarShadowsAI设计师，利用人工智能技术，为您提供专业的服装、珠宝、美妆服务。让创意与科技完美融合打造独一无二的时尚作品。',
         status: 'Beta',
-        users: '10+',
+        users: '',
     },
     {
         name: 'Supeflow Canvas',
         description: 'Supeflow Canvas 是一个AI智能体系统，可以自动构建和优化AI内容创作流程，为用户提供全流程全自动的AI内容创作服务。',
         status: 'Development',
-        users: '-',
+        users: '',
     },
+    {
+        name: 'MicroTouch',
+        description: 'MicroTouch 是一个AI搜索智能体，可以自动构建搜索资料和可插拔的AI分析搜索工具，为用户提供全个性全自主全掌握的AI搜索服务。',
+        status: 'Development',
+        users: '',
+    }
 ];
 
 export default function ProductSection() {
