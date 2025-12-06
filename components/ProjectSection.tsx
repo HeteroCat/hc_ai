@@ -53,7 +53,7 @@ export default function ProjectSection() {
                         </CardContent>
                         <CardFooter className="flex justify-between">
                             {project.github && (
-                                <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white" asChild>
+                                <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white hover:bg-transparent focus:bg-transparent active:bg-transparent" asChild>
                                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                                         <Github className="mr-2 h-4 w-4" /> GitHub
                                     </a>
