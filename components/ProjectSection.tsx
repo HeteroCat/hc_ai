@@ -29,7 +29,7 @@ const projects = [
 
 export default function ProjectSection() {
     return (
-        <section className="py-12 w-full">
+        <section id="projects" className="py-12 w-full">
             <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                 Featured Projects
             </h2>

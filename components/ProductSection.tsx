@@ -32,7 +32,7 @@ const products = [
 
 export default function ProductSection() {
     return (
-        <section className="py-12 w-full">
+        <section id="products" className="py-12 w-full">
             <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
                 AI Products
             </h2>

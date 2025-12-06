@@ -3,7 +3,7 @@ import { siXiaohongshu, siTiktok, siBilibili } from 'simple-icons';
 
 export default function ContactSection() {
     return (
-        <section className="py-12 w-full text-center">
+        <section id="contact" className="py-12 w-full text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Get In Touch/联系方式</h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">
                 I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.

@@ -16,10 +16,10 @@ const Hyperspeed = dynamic(() => import('@/components/Hyperspeed'), {
 
 export default function Home() {
   const menuItems = [
-    { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-    { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
-    { label: 'Services', ariaLabel: 'View our services', link: '/services' },
-    { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+    { label: '项目', ariaLabel: '查看我的项目', link: '#projects' },
+    { label: '产品', ariaLabel: '查看我的产品', link: '#products' },
+    { label: '技能', ariaLabel: '查看我的技能', link: '#skills' },
+    { label: '联系我', ariaLabel: '联系我', link: '#contact' },
   ];
 
   const socialItems = [
@@ -51,23 +51,21 @@ export default function Home() {
         <ContactSection />
       </div>
 
-      <div style={{ position: 'fixed', top: 0, right: 0, height: '100vh', zIndex: 50 }}>
-        <StaggeredMenu
-          position="right"
-          items={menuItems}
-          socialItems={socialItems}
-          displaySocials={true}
-          displayItemNumbering={true}
-          menuButtonColor="#fff"
-          openMenuButtonColor="#fff"
-          changeMenuColorOnOpen={true}
-          colors={['#B19EEF', '#5227FF']}
-          accentColor="#FACC15"
-          isFixed={true}
-          onMenuOpen={() => console.log('Menu opened')}
-          onMenuClose={() => console.log('Menu closed')}
-        />
-      </div>
+      <StaggeredMenu
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={true}
+        displayItemNumbering={true}
+        menuButtonColor="#fff"
+        openMenuButtonColor="#fff"
+        changeMenuColorOnOpen={true}
+        colors={['#B19EEF', '#5227FF']}
+        accentColor="#FACC15"
+        isFixed={true}
+        onMenuOpen={() => console.log('Menu opened')}
+        onMenuClose={() => console.log('Menu closed')}
+      />
     </main>
   );
 }
