@@ -15,18 +15,21 @@ const products = [
         description: 'StarShadowsAI设计师，利用人工智能技术，为您提供专业的服装、珠宝、美妆服务。让创意与科技完美融合打造独一无二的时尚作品。',
         status: 'Beta',
         users: '',
+        link: 'https://ssn.heterocat.com.cn',
     },
     {
         name: 'Supeflow Canvas',
         description: 'Supeflow Canvas 是一个AI智能体系统，可以自动构建和优化AI内容创作流程，为用户提供全流程全自动的AI内容创作服务。',
         status: 'Development',
         users: '',
+        link: 'https://superflow.heterocat.com.cn',
     },
     {
         name: 'MicroTouch',
         description: 'MicroTouch 是一个AI搜索智能体，可以自动构建搜索资料和可插拔的AI分析搜索工具，为用户提供全个性全自主全掌握的AI搜索服务。',
         status: 'Development',
         users: '',
+        link: 'https://microtouch.heterocat.com.cn',
     }
 ];
 
