@@ -16,13 +16,13 @@ interface Work {
     tags?: string[];
 }
 
-const categories = ['产品', '视频', '智能体', '文章', '证书'];
+const categories = ['作品', '视频', '智能体', '文章', '证书'];
 
 const works: Work[] = [
     {
         title: 'PromptMarket',
         description: 'PromptMarket 是一个AI提示广场，发现、分享和创建高质量的AI提示词模板。为电商、金融、教育工作者提供专业的提示词资源，提升AI使用效率和创作质量',
-        category: '产品',
+        category: '作品',
         status: 'Live',
         link: 'https://prompt.heterocat.com.cn',
         tags: ['AI', 'Prompt', 'SaaS'],
@@ -30,7 +30,7 @@ const works: Work[] = [
     {
         title: 'Supeflow Canvas',
         description: 'Supeflow Canvas 是一个AI智能体系统，可以自动构建和优化AI内容创作流程，为用户提供全流程全自动的AI内容创作服务。',
-        category: '产品',
+        category: '作品',
         status: 'Development',
         link: 'https://superflow.heterocat.com.cn',
         tags: ['AI Agent', 'Workflow'],
@@ -38,7 +38,7 @@ const works: Work[] = [
     {
         title: 'MicroTouch',
         description: 'MicroTouch 是一个AI搜索智能体，可以自动构建搜索资料和可插拔的AI分析搜索工具，为用户提供全个性全自主全掌握的AI搜索服务。',
-        category: '产品',
+        category: '作品',
         status: 'Development',
         link: 'https://touch.heterocat.com.cn',
         tags: ['AI Search', 'Agent'],
@@ -46,7 +46,7 @@ const works: Work[] = [
 ];
 
 export default function AIWorksSection() {
-    const [activeCategory, setActiveCategory] = useState('产品');
+    const [activeCategory, setActiveCategory] = useState('作品');
 
     const filteredWorks = works.filter((w) => w.category === activeCategory);
 
