@@ -5,8 +5,7 @@ import SplashCursor from '@/components/SplashCursor';
 import StaggeredMenu from '@/components/StaggeredMenu';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
-import ProductSection from '@/components/ProductSection';
-import SkillSection from '@/components/SkillSection';
+import AIWorksSection from '@/components/AIWorksSection';
 import ContactSection from '@/components/ContactSection';
 import { Separator } from '@/components/ui/separator';
 
@@ -17,8 +16,7 @@ const Hyperspeed = dynamic(() => import('@/components/Hyperspeed'), {
 export default function Home() {
   const menuItems = [
     { label: '项目', ariaLabel: '查看我的项目', link: '#projects' },
-    { label: '产品', ariaLabel: '查看我的产品', link: '#products' },
-    { label: '技能', ariaLabel: '查看我的技能', link: '#skills' },
+    { label: '作品', ariaLabel: '查看我的作品', link: '#works' },
     { label: '联系我', ariaLabel: '联系我', link: '#contact' },
   ];
 
@@ -44,9 +42,7 @@ export default function Home() {
         <Separator className="bg-white/10" />
         <ProjectSection />
         <Separator className="bg-white/10" />
-        <ProductSection />
-        <Separator className="bg-white/10" />
-        <SkillSection />
+        <AIWorksSection />
         <Separator className="bg-white/10" />
         <ContactSection />
       </div>
