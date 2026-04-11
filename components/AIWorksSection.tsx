@@ -21,10 +21,10 @@ const categories = ['作品', '视频', '智能体', '文章', '证书'];
 
 const videos = [
     {
-        title: '《BobCAT》',
-        embedUrl: 'https://www.youtube.com/embed/NXCB2IWmp4c',
-        link: 'https://youtube.com/shorts/NXCB2IWmp4c',
-        tags: ['YouTube', 'AI music', 'Trap'],
+        title: '《穿越时光的信》',
+        embedUrl: 'https://www.youtube.com/embed/d74PhGIwCl4',
+        link: 'https://youtu.be/d74PhGIwCl4',
+        tags: ['YouTube', 'AI video', 'Short Drama'],
         platform: 'youtube' as const,
     },
     {
@@ -32,6 +32,13 @@ const videos = [
         embedUrl: 'https://www.youtube.com/embed/OGkZCy_l2EA',
         link: 'https://youtube.com/shorts/OGkZCy_l2EA',
         tags: ['YouTube','AI music', 'POP'],
+        platform: 'youtube' as const,
+    },
+    {
+        title: '《BobCAT》',
+        embedUrl: 'https://www.youtube.com/embed/NXCB2IWmp4c',
+        link: 'https://youtube.com/shorts/NXCB2IWmp4c',
+        tags: ['YouTube', 'AI music', 'Trap EDM'],
         platform: 'youtube' as const,
     },
 ];
@@ -89,19 +96,19 @@ const certificates = [
 const works: Work[] = [
     {
         title: 'PromptMarket',
-        description: 'PromptMarket 是一个AI提示广场，发现、分享和创建高质量的AI提示词模板。为电商、金融、教育工作者提供专业的提示词资源，提升AI使用效率和创作质量',
+        description: 'PromptMarket 是一个AI提示广场，发现、分享和创建高质量的AI提示词模板。为电商、金融、教育工作者提供专业的提示词资源。',
         category: '作品',
         status: 'Live',
         link: 'https://prompt.heterocat.com.cn',
-        tags: ['AI', 'Prompt', 'SaaS'],
+        tags: ['AI', 'Prompt', 'Community'],
     },
     {
-        title: 'Supeflow Canvas',
-        description: 'Supeflow Canvas 是一个AI智能体系统，可以自动构建和优化AI内容创作流程，为用户提供全流程全自动的AI内容创作服务。',
+        title: 'Muses-System',
+        description: 'Muses-System 是一个AI智能体系统，可以自动构建和优化AI内容创作流程，为用户提供全流程全自动的AI内容创作服务。',
         category: '作品',
-        status: 'Development',
-        link: 'https://superflow.heterocat.com.cn',
-        tags: ['AI Agent', 'Workflow'],
+        status: 'Live',
+        link: 'https://musesos.ai-magic.top',
+        tags: [ 'AIGC', 'AI Agent', 'Workflow'],
     },
     {
         title: 'MicroTouch',

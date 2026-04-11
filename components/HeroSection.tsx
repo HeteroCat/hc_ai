@@ -38,6 +38,7 @@ export default function HeroSection() {
                     <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm text-left">
                         <li>Datewhale成员</li>
                         <li>WaytoAGI超创</li>
+                        <li>AI 微电影黑客松第二名</li>
                         <li>稀土掘金社区AI人气作者</li>
                         <li>上海交通大学AI访谈嘉宾</li>
                         <li>《ChatGPT原理与应用开发》共创作者</li>

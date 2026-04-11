@@ -22,7 +22,7 @@ const projects: Project[] = [
         title: 'Hello-Agents #TOP1',
         description: '📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程.从基础理论到实际应用，全面掌握智能体系统的设计与实现，Datawhale 社区的系统性智能体学习教程',
         tags: ['Python', 'OpenAI', 'LLM', 'Agents', "multiagent"],
-        link: 'https://book.heterocat.com.cn',
+        link: 'https://traehello-agents-aicookbookt5mr.vercel.app',
         github: 'https://github.com/datawhalechina/hello-agents',
         image: '/hello-agents.png',
         repo: 'datawhalechina/hello-agents',
