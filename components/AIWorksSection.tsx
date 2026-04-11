@@ -79,6 +79,13 @@ const agents = [
         image: '/agents/ai-review.png',
         tags: ['Coze', 'Self-improvement'],
     },
+    {
+        title: 'AI Data Analysis',
+        description: 'AI数据分析智能体应用，帮助你进行数据分析。',
+        link: 'https://www.coze.cn/s/-FFDPYw8X8s/',
+        image: '/agents/ai-data.jpg',
+        tags: ['Coze', 'Data Analysis'],
+    },
 ];
 
 const certificates = [
