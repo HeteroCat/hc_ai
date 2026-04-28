@@ -21,6 +21,13 @@ const categories = ['作品', '视频', '智能体', '文章', '证书'];
 
 const videos = [
     {
+        title: '《离谱村AI LIVE SHOW》',
+        embedUrl: 'https://www.youtube.com/embed/7i8uGz0dZjo',
+        link: 'https://www.youtube.com/watch?v=7i8uGz0dZjo',
+        tags: ['YouTube', 'AI music', 'Punk Rock'],
+        platform: 'youtube' as const,
+    },
+    {
         title: '《穿越时光的信》',
         embedUrl: 'https://www.youtube.com/embed/d74PhGIwCl4',
         link: 'https://youtu.be/d74PhGIwCl4',
@@ -31,7 +38,7 @@ const videos = [
         title: '《Shadow Walker》',
         embedUrl: 'https://www.youtube.com/embed/OGkZCy_l2EA',
         link: 'https://youtube.com/shorts/OGkZCy_l2EA',
-        tags: ['YouTube','AI music', 'POP'],
+        tags: ['YouTube', 'AI music', 'POP'],
         platform: 'youtube' as const,
     },
     {
@@ -115,7 +122,7 @@ const works: Work[] = [
         category: '作品',
         status: 'Live',
         link: 'https://musesos.ai-magic.top',
-        tags: [ 'AIGC', 'AI Agent', 'Workflow'],
+        tags: ['AIGC', 'AI Agent', 'Workflow'],
     },
     {
         title: 'MicroTouch',
@@ -124,6 +131,13 @@ const works: Work[] = [
         status: 'Development',
         link: 'https://touch.heterocat.com.cn',
         tags: ['AI Search', 'Agent'],
+    },
+    {
+        title: 'DeepSeek V4 来了',
+        description: '解读 DeepSeek V4 的发布和技术升级，分享其在大模型领域的最新进展和应用。',
+        category: '文章',
+        link: 'https://juejin.cn/post/7632208925455319074',
+        tags: ['DeepSeek', 'LLM升级', '深度解读'],
     },
     {
         title: '黄佩林的 AI 成长之路',
@@ -173,11 +187,10 @@ export default function AIWorksSection() {
                         key={cat}
                         variant="ghost"
                         onClick={() => setActiveCategory(cat)}
-                        className={`rounded-full px-5 transition-all ${
-                            activeCategory === cat
+                        className={`rounded-full px-5 transition-all ${activeCategory === cat
                                 ? 'bg-purple-600 text-white hover:bg-purple-700'
                                 : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
-                        }`}
+                            }`}
                     >
                         {cat}
                     </Button>
@@ -211,7 +224,7 @@ export default function AIWorksSection() {
                                 >
                                     <div className="text-center">
                                         <svg className="w-16 h-16 mx-auto mb-2 opacity-80" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                                         </svg>
                                         <p className="text-sm text-gray-300">点击前往 YouTube 观看</p>
                                     </div>

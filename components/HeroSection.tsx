@@ -37,9 +37,9 @@ export default function HeroSection() {
                     <h3 className="text-lg font-semibold mb-2 text-yellow-400">Honors & Awards</h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm text-left">
                         <li>Datewhale成员、WaytoAGI超创</li>
-                        <li>百度大模型应用挑战赛最佳创意奖、AI 微电影黑客松第二名</li>
+                        <li>百度大模型应用挑战赛最佳创意奖、阿里百炼 AI 智能体作品签约作者、AI 微电影黑客松第二名</li>
                         <li>稀土掘金社区AI人气作者、上海交通大学AI访谈嘉宾</li>
-                        <li>《ChatGPT原理与应用开发》共创作者、35k+ stars《Hello-Agents》开源项目核心贡献者</li>
+                        <li>《ChatGPT原理与应用开发》共创作者、40k+ stars《Hello-Agents》开源项目核心贡献者</li>
                     </ul>
                 </div>
             </div>
