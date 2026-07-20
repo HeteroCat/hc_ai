@@ -33,8 +33,9 @@ describe.each([
       .spyOn(HTMLCanvasElement.prototype, "getContext")
       .mockReturnValue(null)
 
-    render(<SplashCursor />)
+    const { container } = render(<SplashCursor />)
 
     expect(getContext).not.toHaveBeenCalled()
+    expect(container.firstElementChild).toHaveClass("z-30")
   })
 })

@@ -43,9 +43,11 @@ describe("SayHello", () => {
 
     await user.click(trigger)
 
-    expect(screen.getByRole("dialog", { name: "微信联系" })).toBeInTheDocument()
-    expect(screen.getByRole("img", { name: "Jason 的微信二维码" }))
-      .toHaveAttribute("src", "/wechat-qr.jpg")
+    const dialog = screen.getByRole("dialog", { name: "微信联系" })
+    expect(dialog).toHaveClass("max-h-[100svh]", "overflow-y-auto", "overscroll-contain")
+    const qrImage = screen.getByRole("img", { name: "Jason 的微信二维码" })
+    expect(qrImage).toHaveAttribute("src", "/wechat-qr.jpg")
+    expect(qrImage.parentElement?.parentElement).toHaveClass("w-[min(100%,55svh)]")
     expect(trigger).toHaveAttribute("aria-expanded", "true")
     expect(trigger).toHaveAttribute("aria-controls")
     expect(trigger.getAttribute("aria-controls")).toBe(

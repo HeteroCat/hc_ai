@@ -39,7 +39,7 @@ export function SelectedNotes({ items }: { items: ContentItem[] }) {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-fit text-xl font-medium leading-snug underline-offset-4 transition-colors duration-150 hover:text-foreground hover:underline focus-visible:rounded-sm focus-visible:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none md:text-2xl"
+                      className="inline-flex min-h-11 w-fit items-center text-xl font-medium leading-snug underline-offset-4 transition-colors duration-150 hover:text-foreground hover:underline focus-visible:rounded-sm focus-visible:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none md:text-2xl"
                     >
                       {item.title}
                       <span className="sr-only">（在新窗口打开）</span>

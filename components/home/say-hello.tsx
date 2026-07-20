@@ -85,7 +85,7 @@ function MobileWeChat({ xiaohongshuHref }: ContactPanelProps) {
       <SheetContent
         side="bottom"
         showCloseButton={false}
-        className="gap-6 border-border bg-popover px-5 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-none data-[state=closed]:duration-200 data-[state=open]:duration-300 motion-reduce:transition-none motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none sm:px-6"
+        className="max-h-[100svh] gap-6 overflow-y-auto overscroll-contain border-border bg-popover px-5 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-none data-[state=closed]:duration-200 data-[state=open]:duration-300 motion-reduce:transition-none motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none sm:px-6"
       >
         <SheetHeader className="mx-auto w-full max-w-sm gap-2 p-0 pr-14 text-left">
           <SheetTitle className="text-lg font-medium tracking-[-0.015em]">微信联系</SheetTitle>
@@ -93,7 +93,7 @@ function MobileWeChat({ xiaohongshuHref }: ContactPanelProps) {
             长按二维码可保存到相册，再用微信识别添加。
           </SheetDescription>
         </SheetHeader>
-        <div className="mx-auto w-full max-w-sm">
+        <div className="mx-auto w-[min(100%,55svh)] max-w-sm">
           <WeChatPanel xiaohongshuHref={xiaohongshuHref} />
         </div>
         <SheetClose className="absolute top-4 right-4 inline-flex size-11 items-center justify-center text-muted-foreground transition-colors duration-150 hover:text-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transition-none">

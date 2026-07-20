@@ -1290,7 +1290,7 @@ export default function SplashCursor({
   ]);
 
   return (
-    <div className="pointer-events-none fixed top-0 left-0 z-50 h-full w-full motion-reduce:hidden" style={{ filter: 'contrast(1.5) brightness(1.2)' }}>
+    <div className="pointer-events-none fixed top-0 left-0 z-30 h-full w-full motion-reduce:hidden" style={{ filter: 'contrast(1.5) brightness(1.2)' }}>
       <canvas ref={canvasRef} id="fluid" className="w-screen h-screen block"></canvas>
     </div>
   );
