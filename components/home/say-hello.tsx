@@ -50,7 +50,7 @@ function WeChatPanel({ xiaohongshuHref }: ContactPanelProps) {
           href={xiaohongshuHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium underline decoration-border underline-offset-4 transition-colors duration-150 hover:text-primary hover:decoration-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none"
+          className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium underline decoration-border underline-offset-4 transition-colors duration-150 hover:text-foreground hover:decoration-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none"
         >
           前往小红书联系
           <ArrowUpRight aria-hidden="true" className="size-3.5" />
@@ -60,7 +60,7 @@ function WeChatPanel({ xiaohongshuHref }: ContactPanelProps) {
   }
 
   return (
-    <div className="border border-border bg-muted/25 p-3">
+    <div className="border border-border bg-background/35 p-3">
       {/* eslint-disable-next-line @next/next/no-img-element -- Keep the original QR byte stream saveable without Next.js recompression. */}
       <img
         src="/wechat-qr.jpg"
@@ -73,7 +73,7 @@ function WeChatPanel({ xiaohongshuHref }: ContactPanelProps) {
 }
 
 const triggerClassName =
-  "inline-flex min-h-11 items-center gap-2 border-b border-border px-1 text-sm font-medium text-foreground transition-colors duration-150 hover:border-primary hover:text-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring data-[state=open]:border-primary data-[state=open]:text-primary motion-reduce:transition-none"
+  "inline-flex min-h-11 items-center gap-2 border-b border-border px-1 text-sm font-medium text-foreground transition-colors duration-150 hover:border-foreground hover:text-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring data-[state=open]:border-foreground data-[state=open]:text-foreground motion-reduce:transition-none"
 
 function MobileWeChat({ xiaohongshuHref }: ContactPanelProps) {
   return (
@@ -85,7 +85,7 @@ function MobileWeChat({ xiaohongshuHref }: ContactPanelProps) {
       <SheetContent
         side="bottom"
         showCloseButton={false}
-        className="gap-6 border-border bg-popover px-6 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-none data-[state=closed]:duration-200 data-[state=open]:duration-300 motion-reduce:transition-none motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none"
+        className="gap-6 border-border bg-popover px-5 pt-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-none data-[state=closed]:duration-200 data-[state=open]:duration-300 motion-reduce:transition-none motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none sm:px-6"
       >
         <SheetHeader className="mx-auto w-full max-w-sm gap-2 p-0 pr-14 text-left">
           <SheetTitle className="text-lg font-medium tracking-[-0.015em]">微信联系</SheetTitle>
@@ -125,7 +125,7 @@ function DesktopWeChat({ xiaohongshuHref }: ContactPanelProps) {
             event.preventDefault()
             triggerRef.current?.focus()
           }}
-          className="z-50 w-64 border border-border bg-popover p-3 text-popover-foreground shadow-none outline-none data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-98 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-98 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none"
+          className="z-50 w-72 border border-border bg-popover p-4 text-popover-foreground shadow-none outline-none data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-98 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-98 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none"
         >
           <p className="mb-3 text-xs leading-5 text-muted-foreground">
             扫码添加微信
@@ -141,24 +141,28 @@ export function SayHello({ xiaohongshuHref }: ContactPanelProps) {
   const isDesktop = useMediaQuery(desktopQuery)
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="border-y border-border">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 sm:py-24">
-        <div className="flex max-w-2xl flex-col gap-5">
-          <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground">SAY HELLO</p>
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="scroll-mt-20 border-y border-border"
+    >
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-6 md:px-8 md:py-28 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-20 lg:py-36">
+        <div className="flex max-w-4xl flex-col gap-6">
+          <p className="text-[0.6875rem] font-medium tracking-[0.18em] text-muted-foreground">SAY HELLO</p>
           <h2
             id="contact-heading"
-            className="text-[clamp(2rem,4.5vw,4rem)] font-medium leading-[1.14] tracking-[-0.035em] text-balance"
+            className="-ml-[0.025em] text-[clamp(2.25rem,5vw,4.75rem)] font-medium leading-[1.08] tracking-[-0.045em] text-balance"
           >
             如果你也在做有趣的东西，欢迎认识一下。
           </h2>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 sm:justify-end">
+        <div className="flex flex-wrap items-center gap-x-7 gap-y-3 lg:justify-end">
           <a
             href={xiaohongshuHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center gap-1.5 border-b border-border px-1 text-sm font-medium text-foreground transition-colors duration-150 hover:border-primary hover:text-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none"
+            className="inline-flex min-h-11 items-center gap-1.5 border-b border-border px-1 text-sm font-medium text-foreground transition-colors duration-150 hover:border-foreground hover:text-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transition-none"
           >
             在小红书认识 Jason
             <ArrowUpRight aria-hidden="true" className="size-4" />
