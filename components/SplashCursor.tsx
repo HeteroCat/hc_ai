@@ -71,6 +71,10 @@ export default function SplashCursor({
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const usesCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    if (prefersReducedMotion || usesCoarsePointer) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
