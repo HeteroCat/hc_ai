@@ -35,7 +35,6 @@ export function SiteHeader() {
           className="inline-flex min-h-11 items-center text-sm font-semibold tracking-[-0.02em] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
           <span>{siteConfig.name}</span>
-          <span aria-hidden="true" className="ml-2 text-muted-foreground">/</span>
         </Link>
 
         <NavigationMenu className="hidden md:flex" viewport={false}>

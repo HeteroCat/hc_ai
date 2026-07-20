@@ -22,7 +22,9 @@ describe("personal site identity", () => {
   it("renders the personal brand without commercial calls to action", () => {
     render(<SiteHeader />)
 
-    expect(screen.getByRole("link", { name: "Jason Huang" })).toHaveAttribute("href", "/")
+    const brandLink = screen.getByRole("link", { name: "Jason Huang" })
+    expect(brandLink).toHaveAttribute("href", "/")
+    expect(brandLink).toHaveTextContent(/^Jason Huang$/)
     expect(screen.queryByText("企业咨询")).not.toBeInTheDocument()
     expect(screen.queryByText("咨询即将开放")).not.toBeInTheDocument()
     expect(screen.queryByText("企业服务")).not.toBeInTheDocument()
