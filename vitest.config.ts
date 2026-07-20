@@ -3,5 +3,9 @@ import { defineConfig } from "vitest/config"
 
 export default defineConfig({
   resolve: { alias: { "@": path.resolve(process.cwd()) } },
-  test: { environment: "jsdom", setupFiles: ["./vitest.setup.tsx"] },
+  test: {
+    clearMocks: true,
+    environment: "jsdom",
+    setupFiles: ["./vitest.setup.tsx"],
+  },
 })

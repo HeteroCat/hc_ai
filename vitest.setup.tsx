@@ -1,7 +1,10 @@
 import "@testing-library/jest-dom/vitest"
 
+import { cleanup } from "@testing-library/react"
 import type { ImgHTMLAttributes } from "react"
-import { vi } from "vitest"
+import { afterEach, vi } from "vitest"
+
+afterEach(cleanup)
 
 vi.mock("next/image", () => ({
   default: ({
