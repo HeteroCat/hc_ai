@@ -28,18 +28,33 @@ const linkedNote: ContentItem = {
 }
 
 describe("HomeIntro", () => {
-  it("introduces Jason and his current areas of focus", () => {
-    render(<HomeIntro />)
+  it("renders the approved personal introduction contract", () => {
+    const { container } = render(<HomeIntro />)
 
-    expect(screen.getByRole("heading", { name: /你好，我是 Jason/ })).toBeInTheDocument()
+    expect(container.firstElementChild).toMatchObject({ tagName: "SECTION", id: "intro" })
+    expect(screen.getByText("AI BUILDER · CREATOR · OPEN-SOURCE CONTRIBUTOR")).toBeInTheDocument()
+    expect(screen.getByRole("heading", {
+      level: 1,
+      name: "你好，我是 Jason。我做 AI 产品，也记录一路上的想法。",
+    })).toBeInTheDocument()
     expect(screen.getByText(/Agent、AI 产品和生成式内容/)).toBeInTheDocument()
+    expect(screen.getByText("NOW / 2026")).toBeInTheDocument()
+    expect(screen.queryByText(/企业|能力地图|capability/i)).not.toBeInTheDocument()
+    expect(screen.queryByRole("button")).not.toBeInTheDocument()
+    expect(container.querySelector("[data-slot='badge']")).not.toBeInTheDocument()
   })
 })
 
 describe("SelectedProjects", () => {
   it("renders secure external project links and the internal projects index", () => {
-    const { rerender } = render(<SelectedProjects items={[linkedProject]} />)
+    const { container, rerender } = render(<SelectedProjects items={[linkedProject]} />)
 
+    expect(container.firstElementChild).toMatchObject({ tagName: "SECTION", id: "projects" })
+    const firstRow = screen.getByRole("listitem")
+    expect(firstRow).toHaveTextContent("01")
+    expect(firstRow).toHaveTextContent(linkedProject.title)
+    expect(firstRow).toHaveTextContent(linkedProject.category)
+    expect(firstRow).toHaveTextContent(linkedProject.summary)
     expect(screen.getByRole("link", { name: /Agent Workbench/ }))
       .toHaveAttribute("href", linkedProject.href)
     expect(screen.getByRole("link", { name: /Agent Workbench/ }))
@@ -63,8 +78,9 @@ describe("SelectedProjects", () => {
 
 describe("SelectedNotes", () => {
   it("presents notes without recency claims and uses secure external links", () => {
-    const { rerender } = render(<SelectedNotes items={[linkedNote]} />)
+    const { container, rerender } = render(<SelectedNotes items={[linkedNote]} />)
 
+    expect(container.firstElementChild).toMatchObject({ tagName: "SECTION", id: "notes" })
     expect(screen.getByRole("heading", { name: "文章与笔记" })).toBeInTheDocument()
     expect(screen.queryByText(/最新|最近写下/)).not.toBeInTheDocument()
     expect(screen.getByRole("link", { name: "查看全部文章" }))
@@ -73,6 +89,10 @@ describe("SelectedNotes", () => {
       .toHaveAttribute("target", "_blank")
     expect(screen.getByRole("link", { name: /可靠 Agent 工作流的几个切面/ }))
       .toHaveAttribute("rel", "noopener noreferrer")
+    const firstRow = screen.getByRole("listitem")
+    expect(firstRow).toHaveTextContent(linkedNote.title)
+    expect(firstRow).toHaveTextContent(linkedNote.category)
+    expect(firstRow).toHaveTextContent(linkedNote.summary)
 
     rerender(<SelectedNotes items={[]} />)
     expect(screen.getByText("更多文章正在整理中")).toBeInTheDocument()
@@ -81,11 +101,19 @@ describe("SelectedNotes", () => {
 
 describe("AboutJason", () => {
   it("uses Jason's portrait and points readers to a meaningful about page", () => {
-    render(<AboutJason />)
+    const { container } = render(<AboutJason />)
 
-    expect(screen.getByRole("img", { name: "Jason Huang" }))
-      .toHaveAttribute("src", "/jason-hd.png")
-    expect(screen.queryByText(/荣誉|最佳|获奖/)).not.toBeInTheDocument()
+    expect(container.firstElementChild).toMatchObject({ tagName: "SECTION", id: "about" })
+    expect(screen.getByRole("heading", {
+      name: "持续学习，也持续把想法做成产品。",
+    })).toBeInTheDocument()
+    expect(screen.getByText(/AI 如何进入真实工作与创作/)).toBeInTheDocument()
+    const portrait = screen.getByRole("img", { name: "Jason Huang" })
+    expect(portrait).toHaveAttribute("src", "/jason-hd.png")
+    expect(portrait).toHaveClass("object-contain")
+    expect(portrait.parentElement).toHaveClass("aspect-square")
+    expect(screen.queryByText(/荣誉|最佳|获奖|企业|商业|badge/i)).not.toBeInTheDocument()
+    expect(container.querySelector("[data-slot='badge']")).not.toBeInTheDocument()
     expect(screen.getByRole("link", { name: /了解更多关于 Jason/ }))
       .toHaveAttribute("href", "/about")
   })

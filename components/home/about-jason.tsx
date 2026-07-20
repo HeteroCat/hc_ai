@@ -5,13 +5,13 @@ export function AboutJason() {
   return (
     <section id="about" aria-labelledby="about-heading" className="border-b border-border">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:px-8 md:py-32 lg:grid-cols-[minmax(18rem,0.75fr)_minmax(0,1.25fr)] lg:items-center lg:gap-20">
-        <figure className="relative aspect-[4/5] overflow-hidden bg-muted">
+        <figure className="relative aspect-square overflow-hidden bg-muted">
           <Image
             src="/jason-hd.png"
             alt="Jason Huang"
             fill
             sizes="(min-width: 1024px) 38vw, 100vw"
-            className="object-cover object-center"
+            className="object-contain object-center"
           />
         </figure>
 
