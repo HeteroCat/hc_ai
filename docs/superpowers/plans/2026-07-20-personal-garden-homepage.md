@@ -320,9 +320,9 @@ describe("homepage content selection", () => {
 
   it("takes the first three linked articles in their curated source order", () => {
     expect(getSelectedNotes(articleItems).map((item) => item.slug)).toEqual([
+      "agent-foundations",
       "prompt-skills",
       "chatgpt-overview",
-      "ai-year-2023",
     ])
   })
 

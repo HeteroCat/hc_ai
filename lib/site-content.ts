@@ -21,21 +21,17 @@ export interface ServiceItem {
 }
 
 export const siteConfig = {
-  name: "Jason AI",
-  tagline: "AI 学习、实战与企业落地平台",
-  description:
-    "用清晰的知识、真实的项目和可落地的服务，帮助个人掌握 AI，也帮助企业把 AI 变成生产力。",
+  name: "Jason Huang",
+  tagline: "AI Builder、内容创作者与开源贡献者",
+  description: "Jason Huang 的个人主页，记录 AI 项目、文章、开源共创与持续生长的想法。",
   feishuFormUrl: "",
 }
 
 export const navItems = [
-  { title: "首页", href: "/" },
-  { title: "AI 知识库", href: "/knowledge" },
-  { title: "实战项目", href: "/projects" },
-  { title: "培训课程", href: "/training" },
-  { title: "企业服务", href: "/enterprise" },
-  { title: "成功案例", href: "/cases" },
-  { title: "关于我", href: "/about" },
+  { title: "项目", href: "/#projects" },
+  { title: "文章", href: "/#notes" },
+  { title: "关于", href: "/about" },
+  { title: "联系", href: "/#contact" },
 ]
 
 export const knowledgeItems: ContentItem[] = [

@@ -16,13 +16,13 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jason AI｜AI 学习、实战与企业落地平台",
-    template: "%s｜Jason AI",
+    default: "Jason Huang｜AI Builder & Creator",
+    template: "%s｜Jason Huang",
   },
-  description: "通过 AI 知识、真实项目、培训与企业服务，连接学习、实践和业务落地。",
+  description: "Jason Huang 的个人主页，记录 AI 项目、文章、开源共创与持续生长的想法。",
   openGraph: {
-    title: "Jason AI",
-    description: "AI 学习、实战与企业落地平台",
+    title: "Jason Huang",
+    description: "AI 项目、文章与持续生长的想法。",
     type: "website",
     locale: "zh_CN",
   },
