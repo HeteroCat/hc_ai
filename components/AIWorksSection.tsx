@@ -21,32 +21,22 @@ const categories = ['大玩具', '视频', '智能体', '文章', '证书'];
 
 const videos = [
     {
-        title: '《离谱村AI LIVE SHOW》',
-        embedUrl: 'https://www.youtube.com/embed/7i8uGz0dZjo',
-        link: 'https://www.youtube.com/watch?v=7i8uGz0dZjo',
-        tags: ['YouTube', 'AI music', 'Punk Rock'],
-        platform: 'youtube' as const,
+        title: '《深夜行者》',
+        embedUrl: 'https://player.bilibili.com/player.html?bvid=BV1XwHY6iEdv&page=1&autoplay=0',
+        link: 'https://www.bilibili.com/video/BV1XwHY6iEdv',
+        tags: ['AI MV', 'Kpop', 'Minimax'],
     },
     {
-        title: '《穿越时光的信》',
-        embedUrl: 'https://www.youtube.com/embed/d74PhGIwCl4',
-        link: 'https://youtu.be/d74PhGIwCl4',
-        tags: ['YouTube', 'AI video', 'Short Drama'],
-        platform: 'youtube' as const,
+        title: '《AI live》',
+        embedUrl: 'https://player.bilibili.com/player.html?bvid=BV1dZHa6uEwY&page=1&autoplay=0',
+        link: 'https://www.bilibili.com/video/BV1dZHa6uEwY',
+        tags: ['AI视频', '摇滚放克', 'Seedance'],
     },
     {
-        title: '《Shadow Walker》',
-        embedUrl: 'https://www.youtube.com/embed/OGkZCy_l2EA',
-        link: 'https://youtube.com/shorts/OGkZCy_l2EA',
-        tags: ['YouTube', 'AI music', 'POP'],
-        platform: 'youtube' as const,
-    },
-    {
-        title: '《BobCAT》',
-        embedUrl: 'https://www.youtube.com/embed/NXCB2IWmp4c',
-        link: 'https://youtube.com/shorts/NXCB2IWmp4c',
-        tags: ['YouTube', 'AI music', 'Trap EDM'],
-        platform: 'youtube' as const,
+        title: '《破阵子》',
+        embedUrl: 'https://player.bilibili.com/player.html?bvid=BV1vZHa6uEBb&page=1&autoplay=0',
+        link: 'https://www.bilibili.com/video/BV1vZHa6uEBb',
+        tags: [ 'AI动画', '中国风', 'King'],
     },
 ];
 
@@ -133,6 +123,13 @@ const works: Work[] = [
         tags: ['AI Search', 'Agent'],
     },
     {
+        title: 'AI时代个体与组织如何应对',
+        description: '从AI行业观察、技术趋势、大厂竞争、个人成长等主题解读最新AI观察与感悟。',
+        category: '文章',
+        link: 'https://juejin.cn/post/7678153516548636735',
+        tags: ['AI 时代', '个体发展', '组织变革'],
+    },
+    {
         title: 'DeepSeek V4 来了',
         description: '解读 DeepSeek V4 的发布和技术升级，分享其在大模型领域的最新进展和应用。',
         category: '文章',
@@ -155,14 +152,14 @@ const works: Work[] = [
     },
     {
         title: 'AI爆发的一年2023总结',
-        description: '回顾2023年AI的爆发性发展，从GPT到AIGC全面爆发的思考与总结，涵盖文本、图像、音频、视频等领域的AI应用实践。',
+        description: '回顾2023年AI的爆发性发展，从GPT到AIGC全面爆发的思考与总结，涵盖多个领域的AI应用实践。',
         category: '文章',
         link: 'https://juejin.cn/post/7317908960756662306',
         tags: ['AI', 'AIGC', '年度总结'],
     },
     {
         title: '一些更丰富的prompt技巧',
-        description: '从GitHub上学习整理的高阶Prompt技巧，涵盖思维链(CoT)、思维树(ToT)、ReAct框架、大模型超参数以及提示词安全等领域。',
+        description: '从GitHub上学习整理的高阶Prompt技巧，涵盖CoT、ToT、ReAct框架、大模型超参数以及提示词安全等领域。',
         category: '文章',
         link: 'https://juejin.cn/post/7283426137968525312',
         tags: ['Prompt', 'ChatGPT', '技巧'],
@@ -176,7 +173,7 @@ export default function AIWorksSection() {
 
     return (
         <section id="works" className="py-12 w-full">
-            <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
+            <h2 className="text-3xl font-bold mb-8 text-center text-yellow-400">
                 AI Works
             </h2>
 
@@ -188,7 +185,7 @@ export default function AIWorksSection() {
                         variant="ghost"
                         onClick={() => setActiveCategory(cat)}
                         className={`rounded-full px-5 transition-all ${activeCategory === cat
-                                ? 'bg-purple-600 text-white hover:bg-purple-700'
+                                ? 'bg-yellow-400 text-black hover:bg-yellow-300'
                                 : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
                             }`}
                     >
@@ -203,35 +200,28 @@ export default function AIWorksSection() {
                     {videos.map((video, index) => (
                         <div
                             key={index}
-                            className="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:border-purple-500/50 transition-all"
+                            className="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:border-yellow-400/50 transition-all"
                         >
-                            {video.embedUrl ? (
-                                <div className="aspect-video w-full relative">
-                                    <iframe
-                                        src={video.embedUrl}
-                                        title={video.title}
-                                        allow="autoplay; encrypted-media"
-                                        allowFullScreen
-                                        className="absolute inset-0 w-full h-full"
-                                    />
-                                </div>
-                            ) : (
+                            <div className="aspect-video w-full relative">
+                                <iframe
+                                    src={video.embedUrl}
+                                    title={video.title}
+                                    loading="lazy"
+                                    allow="fullscreen; encrypted-media; picture-in-picture"
+                                    allowFullScreen
+                                    className="absolute inset-0 w-full h-full"
+                                />
+                            </div>
+                            <div className="p-4">
+                                <h3 className="text-white font-semibold mb-2">{video.title}</h3>
                                 <a
                                     href={video.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center aspect-video w-full bg-gradient-to-br from-red-900/30 to-red-600/10 text-white hover:from-red-900/50 hover:to-red-600/20 transition-all"
+                                    className="inline-block text-sm text-sky-400 hover:text-sky-300 mb-3"
                                 >
-                                    <div className="text-center">
-                                        <svg className="w-16 h-16 mx-auto mb-2 opacity-80" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                        </svg>
-                                        <p className="text-sm text-gray-300">点击前往 YouTube 观看</p>
-                                    </div>
+                                    在 B 站观看 ↗
                                 </a>
-                            )}
-                            <div className="p-4">
-                                <h3 className="text-white font-semibold mb-2">{video.title}</h3>
                                 <div className="flex flex-wrap gap-1.5">
                                     {video.tags.map((tag) => (
                                         <Badge
@@ -257,7 +247,7 @@ export default function AIWorksSection() {
                             rel="noopener noreferrer"
                             className="block no-underline"
                         >
-                            <div className="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:border-purple-500/50 transition-all group">
+                            <div className="rounded-lg border border-white/10 bg-white/5 overflow-hidden hover:border-yellow-400/50 transition-all group">
                                 <div className="aspect-video w-full relative overflow-hidden">
                                     <Image
                                         src={agent.image}
@@ -290,7 +280,7 @@ export default function AIWorksSection() {
                     {certificates.map((cert, index) => (
                         <div
                             key={index}
-                            className="relative group overflow-hidden rounded-lg border border-white/10 bg-white/5 hover:border-purple-500/50 transition-all aspect-[3/2]"
+                            className="relative group overflow-hidden rounded-lg border border-white/10 bg-white/5 hover:border-yellow-400/50 transition-all aspect-[3/2]"
                         >
                             <Image
                                 src={cert.src}
@@ -316,13 +306,13 @@ export default function AIWorksSection() {
                                 {...cardProps}
                                 className={work.link ? 'block no-underline' : ''}
                             >
-                                <Card className="bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 text-white overflow-hidden relative group hover:border-purple-500/50 transition-all cursor-pointer">
+                                <Card className="bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 text-white overflow-hidden relative group hover:border-yellow-400/50 transition-all cursor-pointer">
                                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                         <Rocket size={100} />
                                     </div>
                                     <CardHeader>
                                         <div className="flex justify-between items-start">
-                                            <CardTitle className="text-xl text-purple-300">
+                                            <CardTitle className="text-xl text-yellow-300">
                                                 {work.title}
                                             </CardTitle>
                                             {work.status && (

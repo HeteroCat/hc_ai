@@ -3,6 +3,23 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.hero-name {
+  width: fit-content;
+  padding-inline: 0.08em 0.18em;
+  line-height: 1.25;
+  background-image: linear-gradient(
+    to right,
+    #38bdf8 0%,
+    #60a5fa 25%,
+    #d9dbe5 50%,
+    #fb7185 75%,
+    #ef4444 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
