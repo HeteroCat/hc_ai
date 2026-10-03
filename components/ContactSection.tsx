@@ -1,10 +1,23 @@
 import { Button } from '@/components/ui/button';
+import { Lightbulb } from 'lucide-react';
 import { siXiaohongshu, siTiktok, siBilibili, siX, siYoutube } from 'simple-icons';
 
 export default function ContactSection() {
     return (
         <section id="contact" className="py-12 w-full text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Get In Touch/联系方式</h2>
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                <h2 className="text-3xl font-bold text-white">Get In Touch/联系方式</h2>
+                <a
+                    className="inline-flex items-center justify-center w-12 h-12 shrink-0 text-yellow-400 hover:text-yellow-300 transition-colors focus-visible:outline-2 focus-visible:outline-yellow-400 focus-visible:outline-offset-2"
+                    href="https://zcnx20okg22q.feishu.cn/share/base/form/shrcnKO1iQ9cpBExLfwKjGiStmb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="打开飞书合作表单"
+                    title="有想法？聊聊合作"
+                >
+                    <Lightbulb className="h-5 w-5" aria-hidden="true" />
+                </a>
+            </div>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">
                 我始终乐于探讨新项目、创意或机会。
                 欢迎与我沟通，交个朋友甚至参与到共同的愿景中去。
